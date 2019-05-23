@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    
+    <class name="com.cientooncemil.hibernate.model.muchosamuchos.Rol" table="Rol" schema="111mil">
+        <id name="id">
+            <column name="idRol" sql-type="int(11)"/>
+        </id>
+        
+
+        <property name="nombre">
+            <column name="nombre" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        
+        <set name="clientes" table="ClienteRol"  cascade="all" inverse="false"  >
+          <key>
+             <column name="idRol"  />
+         </key>
+         <many-to-many column="idCliente" class="com.cientooncemil.hibernate.model.Cliente" />
+        </set>
+        
+
+    </class>
+    
+</hibernate-mapping>

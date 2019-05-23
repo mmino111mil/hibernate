@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.cientooncemil.hibernate.model.Orden" table="Orden" schema="111mil">
+        <id name="idOrder">
+            <column name="idOrder" sql-type="int(11)"/>
+        </id>
+        <property name="creacion">
+            <column name="creacion" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="envio">
+            <column name="envio" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="estado">
+            <column name="estado" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

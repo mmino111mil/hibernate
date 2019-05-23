@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cientooncemil.hibernate.model.unoauno.Direccion" schema="111mil" table="Direccion">
+        <id name="id">
+            <column name="idDireccion" sql-type="int(11)"/>
+        </id>
+        <property name="calle">
+            <column length="45" name="calle" not-null="true" sql-type="varchar(100)"/>
+        </property>
+        <property name="numero">
+            <column name="numero" sql-type="in(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

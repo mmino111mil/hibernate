@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        
+        <property name="connection.url">jdbc:mysql://localhost:3306/111mil</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">pass</property>
+        
+        
+        <mapping resource="com/cientooncemil/hibernate/model/Cliente.hbm.xml"/>
+        
+        <mapping resource="com/cientooncemil/hibernate/model/DetalleOrden.hbm.xml"/>
+        <mapping resource="com/cientooncemil/hibernate/model/Notebook.hbm.xml"/>
+        <mapping resource="com/cientooncemil/hibernate/model/Orden.hbm.xml"/>
+        
+        <mapping resource="com/cientooncemil/hibernate/model/muchosauno/Pais.hbm.xml"/>
+
+        <mapping resource="com/cientooncemil/hibernate/model/unoauno/Direccion.hbm.xml"/>
+        
+        <mapping resource="com/cientooncemil/hibernate/model/unoamuchos/CorreoElectronico.hbm.xml"/>
+        
+        <mapping resource="com/cientooncemil/hibernate/model/muchosamuchos/Rol.hbm.xml"/>
+        
+        <!-- DB schema will be updated if neded -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

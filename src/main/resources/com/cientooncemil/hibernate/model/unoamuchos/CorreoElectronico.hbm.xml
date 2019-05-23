@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cientooncemil.hibernate.model.unoamuchos.CorreoElectronico" schema="111mil" table="CorreoElectronico">
+
+        <id column="idCorreo" name="idCorreo" type="integer"/>
+        <property name="direccionCorreo" />
+ 
+        <many-to-one name="cliente">
+            <column name="idCliente"  />
+        </many-to-one>
+
+
+    </class>
+</hibernate-mapping>
